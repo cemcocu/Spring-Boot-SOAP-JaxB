@@ -53,30 +53,8 @@ public class Services {
             e.printStackTrace();
         }
 
-        System.out.print("claistimmm");
+        System.out.print("Datalar settings.properties dosyasindan alinarak Cache e yazıldı");
 
-    }
-
-
-    public HashMap<String,String> getAllValues()
-    {
-        return map;
-    }
-
-
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "PrototypeResponse")
-    @ResponsePayload
-    public List<PrototypeResponse> getValue() {
-
-        List<PrototypeResponse> responseList = new ArrayList<>();
-        List<String> resultList=new ArrayList<>();
-        map.entrySet().stream().forEach(index->{
-            PrototypeResponse response =new PrototypeResponse();
-            response.setValue(index.getValue());
-            responseList.add(response);
-        });
-
-        return responseList;
     }
 
 }
